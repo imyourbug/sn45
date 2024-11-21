@@ -70,7 +70,9 @@ class Miner(BaseMinerNeuron):
         the miner's intended operation. This method demonstrates a basic transformation of input data.
         """
         try:
+            print(f"Received sysnape: {synapse}")
             response = self.miner_process(self, synapse)
+            print(f"Returned sysnape: {response}")
         except:
             bt.logging.error("An error occurred while processing the synapse: ", traceback.format_exc())
         return response
